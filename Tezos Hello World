@@ -1,0 +1,22 @@
+
+// This contract takes a string parameter and stores it as the string storage variable. The 'CAR' and 'CDR' instructions are used to extract the parameter from the pair of the parameter and storage. The 'PAIR' instruction then stores the parameter as the storage value.
+
+parameter string;
+storage string;
+code {
+  CAR;
+  CDR;
+  PAIR
+}
+
+// This calls the contract and set the storage value to "Hello, World!"
+PUSH string "Hello, World!";
+PUSH string "Hello, World!";
+PAIR;
+CONTRACT hello_world;
+
+
+//This retrieves the stored value by calling the contract with no parameter and using the 'CAR' instruction to extract the storage value
+PUSH string "Hello, World!";
+CONTRACT hello_world;
+CAR;
