@@ -1,0 +1,10 @@
+// This contract defines a function 'hello_world' that prints "Hello, World!" to the console.
+#include "wasm_export.h"
+
+wasm_export void hello_world(void) {
+  puts("Hello, World!");
+}
+
+
+// This uses the 'wasm_call' function from the Cosmos SDK
+res, err := wasmClient.WasmCall(from, to, "hell_world', nil)
