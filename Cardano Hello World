@@ -1,0 +1,19 @@
+
+// This contract defines a function 'helloWorldContract' that returns the string "Hello, World!". The 'main' function is required for all Plutus contracts and calls the 'helloWorldContract' function.
+module Main where
+
+import Language.Plutus.Contract
+
+helloWorldContract :: Contract () String
+helloWorldContract = do
+  return "Hello, World!"
+
+main :: Effect String
+main = contract helloWorldContract
+
+// To call the contract, use the following Plutus script
+
+import Main
+
+main : String
+main = runHelloWorldContract
