@@ -1,0 +1,19 @@
+pragam solidity ^0.6.0;
+
+contract HelloWorld {
+  string public message;
+    
+  constructor() public {
+    message = "Hello, World!';
+  }
+  
+  function setMessage(string memory newMessage) public {
+    message = newMessage;
+  }
+  
+  function getMessage() public view returns (string memory) {
+    return message;
+  }
+}
+
+// This contract has a public string variable called "message" that is initialized to "Hello, World!" in the constructor. There are also two functions: "setMessage" which allows you to update the value of "message", and "getMessage" which allows you to retrieve the current value of "message".
